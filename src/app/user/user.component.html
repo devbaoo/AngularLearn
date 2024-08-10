@@ -1,1 +1,42 @@
 ok
+<br />
+<input type="text" value="email" />
+<br />
+<!-- binding data thi su dung [] -->
+<input type="text" [value]="email" />
+<br />
+<input type="text" placeholder="Enter name" [(ngModel)]="student.name" />
+<br />
+<input type="text" placeholder="Enter address" [(ngModel)]="student.address" />
+<br />
+<input type="text" placeholder="Enter age" [(ngModel)]="student.age" />
+<br />
+<button (click)="logEmail()">Show email</button>
+<button (click)="changeColor()">Change color</button>
+
+@if(isBlue){
+<div [class]="[isBlue ? 'text-blue ' : 'text-red']">{{ email }}</div>
+
+}@else{
+<div [class]="[isBlue ? 'text-blue ' : 'text-red']">devbaoo</div>
+} @for( student of students; track $index){
+<div>
+  {{ student.id }} - {{ student.name }} -
+  {{ student.address || "Ko co dia chi" }} - {{ student.age }}
+</div>
+}
+<button (click)="addStudentToArray()">Add student</button>
+<br />
+<ng-container *ngIf="students.length > 0; else noStudent">
+  Danh sach sinh vien
+</ng-container>
+<ng-template #noStudent> khong co sinh vien nao </ng-template>
+<br />
+<ng-container *ngFor="let student of students; track: $index">
+  <div>{{ student.id }}</div>
+  <div>{{ student.name }}</div>
+  <div [class]="student.address ? 'text-blue' : 'text-red'">
+    {{ student.address || "Ko co dia chi" }}
+  </div>
+  <div>{{ student.age }}</div>
+</ng-container>
