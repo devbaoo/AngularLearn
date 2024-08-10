@@ -50,6 +50,11 @@ export class UserComponent implements OnInit {
 
   addStudentToArray() {
     this.students.push(this.student);
+    this.student = {
+      id: 0,
+      name: '',
+      age: 0,
+    };
     console.log(this.students);
   }
 }

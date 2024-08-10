@@ -126,3 +126,43 @@
     </button>
   </div>
 </form>
+<button (click)="toggleStudentForm()">Toggle Student Form</button>
+
+<div *ngIf="showStudentForm">
+  <form class="student-form" (ngSubmit)="addStudent()">
+    <input
+      type="text"
+      placeholder="Enter name"
+      [(ngModel)]="newStudent.name"
+      name="name"
+    />
+    <input
+      type="text"
+      placeholder="Enter address"
+      [(ngModel)]="newStudent.address"
+      name="address"
+    />
+    <input
+      type="number"
+      placeholder="Enter age"
+      [(ngModel)]="newStudent.age"
+      name="age"
+    />
+    <button type="submit">Add Student</button>
+  </form>
+  <ng-container *ngIf="students.length > 0; else noStudent">
+    Danh sach sinh vien
+  </ng-container>
+  <ng-template #noStudent> khong co sinh vien nao </ng-template>
+  <br />
+  <div class="student-list">
+    <div *ngFor="let student of students">
+      <div>Id: {{ student.id }}</div>
+      <div>Name: {{ student.name }}</div>
+      <div [class]="student.address ? 'text-blue' : 'text-red'">
+        Address: {{ student.address || "Ko co dia chi" }}
+      </div>
+      <div>Age: {{ student.age }}</div>
+    </div>
+  </div>
+</div>
