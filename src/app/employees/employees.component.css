@@ -1,3 +1,190 @@
 section {
   display: table;
 }
+/* General Form Styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mat-Form-Field Styling */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-form-field.example-full-width {
+  width: 100%;
+}
+
+/* Button Styling */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #5f6481;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f7f7f7;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #f7f7f7; /* Light background color for the table */
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header Styling */
+th {
+  background-color: #4caf50; /* Green header background */
+  color: #115293; /* White text color */
+}
+
+/* Row Styling */
+tr:nth-child(even) {
+  background-color: #e9f5e9; /* Light green background for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+tr:hover {
+  background-color: #c8e6c9; /* Slightly darker green on hover */
+}
+
+/* Cell Text Styling */
+td {
+  color: #333; /* Dark gray text color */
+}
+/* Spinner Styling */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensures the overlay is above other elements */
+}
+/* Default Light Mode */
+body,
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode table {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.dark-mode th {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode tr:nth-child(even) {
+  background-color: #2e2e2e;
+}
+
+.dark-mode tr:nth-child(odd) {
+  background-color: #1c1c1c;
+}
+
+.dark-mode mat-form-field {
+  color: #ffffff;
+}
+
+.dark-mode mat-input-element {
+  color: #ffffff;
+}
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar mat-slide-toggle {
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  background-color: #293daf; /* Màu nền của nút */
+  color: #ffffff; /* Màu chữ trắng */
+}
+
+.sidebar button:hover {
+  background-color: #444; /* Màu nền khi hover */
+  color: #ffffff; /* Màu chữ khi hover */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Highlight: Dark Mode Styles */
+.dark-mode .sidebar {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .content {
+  background-color: #121212;
+  color: #fff;
+}
+
+.dark-mode .sidebar button {
+  color: #fff;
+}
+
+.dark-mode .sidebar button:hover {
+  background-color: #444;
+}
