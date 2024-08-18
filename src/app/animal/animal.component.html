@@ -1,0 +1,13 @@
+<div>
+  Bay gio la:
+  {{ dateTime | date : "long" }}
+</div>
+
+<div>Luong: $ {{ salary | number : "0.2" }}</div>
+<ng-container *ngFor="let item of animals">
+  <div>{{ item.name }}</div>
+  <div>{{ item.age }}</div>
+  <div [class]="item.status | statusColor">
+    {{ item.status | statuslocale }}
+  </div>
+</ng-container>

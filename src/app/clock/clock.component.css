@@ -1,0 +1,231 @@
+.card {
+  width: 280px;
+  height: 150px;
+  background: rgb(4, 134, 26);
+  border-radius: 15px;
+  box-shadow: rgb(0, 0, 0, 0.7) 5px 10px 50px, rgb(0, 0, 0, 0.7) -5px 0px 250px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(13, 6, 110), rgb(85, 72, 36));
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: rgb(0, 0, 0) 5px 10px 50px, rgb(0, 0, 0) -5px 0px 250px;
+}
+
+.time-text {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+}
+
+.time-sub-text {
+  font-size: 15px;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+
+.day-text {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.moon {
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover > .moon {
+  font-size: 23px;
+}
+/* Spotify music card made by: csozi | Website: www.csozi.hu*/
+
+/* From Uiverse.io by ahmed150up */
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+  background-color: #282828;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.album-cover {
+  width: 64px;
+  height: 64px;
+  background-image: url("https://avatar-ex-swe.nixcdn.com/song/2024/03/18/0/e/7/0/1710733423473_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.player-controls {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-info {
+  margin-bottom: 4px;
+}
+
+.song-title {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+}
+
+.artist {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #4f4f4f;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+  background-color: #1db954;
+  transform-origin: left;
+  animation: progress-animation 10s linear infinite;
+}
+
+.buttons {
+  display: flex;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.play-btn,
+.pause-btn {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.play-btn:hover,
+.pause-btn:hover {
+  transform: scale(1.2);
+}
+
+@keyframes progress-animation {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+/* clock2 */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #d9d7dd;
+}
+
+.clock {
+  border-radius: 100%;
+  background: #ffffff;
+  font-family: "Montserrat";
+  border: 5px solid white;
+  box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wrap {
+  overflow: hidden;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+}
+
+.minute,
+.hour {
+  position: absolute;
+  width: 6px;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  transform-origin: bottom center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hour {
+  height: 100px;
+  top: -27%;
+}
+
+.minute {
+  height: 130px;
+  width: 4px;
+  top: -38%;
+}
+
+.second {
+  position: absolute;
+  height: 90px;
+  width: 2px;
+  margin: auto;
+  top: -26%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background: #ff4b3e;
+  transform-origin: bottom center;
+  z-index: 1;
+}
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: white;
+  border: 2px solid #1b1b1b;
+  margin: auto;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

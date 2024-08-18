@@ -4,19 +4,29 @@ import { UserComponent } from './user/user.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { AnimalComponent } from './animal/animal.component';
+import { ProductComponent } from './product/product.component';
+import { ClockComponent } from './clock/clock.component';
+import { StudentComponent } from './student/student.component';
+import { StudentDialogComponent } from './student-dialog/student-dialog.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
   imports: [
     RouterOutlet,
     UserComponent,
     ContactComponent,
     LoginComponent,
     EmployeesComponent,
+    AnimalComponent,
+    ProductComponent,
+    ClockComponent,
+    StudentComponent,
+    StudentDialogComponent,
   ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
   public name: string | null | 'Ditmemay' | 'Concac' | number = null;

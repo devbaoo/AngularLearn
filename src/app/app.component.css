@@ -1,44 +1,6 @@
-/* .container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
 }
-
-login {
-  width: 300px;
-  height: 200px;
-} */
-/* src/app/app.component.css */
-/* h2 {
-  color: #2d79f3;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-button {
-  background-color: #2d79f3;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: calc(100% - 22px);
-  margin-bottom: 15px;
-}
-
-input:focus {
-  border-color: #007bff;
-  outline: none;
-} */
