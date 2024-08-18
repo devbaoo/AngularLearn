@@ -22,9 +22,11 @@ export class StudentService {
   deleteStudent(id: string) {
     return this._httpClient.delete('/api/students/' + id);
   }
+  // lấy thông tin student theo id
   getStudentById(id: string) {
     return this._httpClient.get<Student>('/api/students/' + id);
   }
+  // cập nhật thông tin student
   updateStudent(student: Student) {
     return this._httpClient.put<Student>(
       '/api/students/' + student.id,

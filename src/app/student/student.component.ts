@@ -5,9 +5,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog'; // Import MatDialog and MatDialogModule
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Student, StudentCreate } from './student.type';
-import { StudentDialogComponent } from '../student-dialog/student-dialog.component'; // Import StudentDialogComponent
+import { StudentDialogComponent } from '../student-dialog/student-dialog.component';
 
 @Component({
   selector: 'student',
@@ -19,14 +19,13 @@ import { StudentDialogComponent } from '../student-dialog/student-dialog.compone
     MatTableModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule, // Add MatDialogModule to imports
+    MatDialogModule,
   ],
 })
 export class StudentComponent implements OnInit {
   students = new MatTableDataSource<Student>([]);
   displayedColumns: string[] = ['name', 'age', 'email', 'phone', 'actions'];
 
-  // Inject MatDialog into the component
   constructor(
     private _studentService: StudentService,
     private _dialog: MatDialog
@@ -52,7 +51,7 @@ export class StudentComponent implements OnInit {
 
   createStudent() {
     const dialogRef = this._dialog.open(StudentDialogComponent, {
-      width: '400px',
+      width: '270px',
       data: null, // Khi tạo mới, data sẽ là null
     });
 
@@ -77,12 +76,13 @@ export class StudentComponent implements OnInit {
     this._studentService.deleteStudent(id).subscribe({
       next: () => {
         this.loadStudent();
+        console.log('xoa chua');
       },
       error: (error) => {
         console.log(error);
       },
       complete: () => {
-        console.log('Student deleted');
+        console.log('Call API complete');
       },
     });
   }
@@ -90,8 +90,8 @@ export class StudentComponent implements OnInit {
     this._studentService.getStudentById(studentId).subscribe({
       next: (student: Student) => {
         const dialogRef = this._dialog.open(StudentDialogComponent, {
-          width: '400px',
           data: student,
+          width: '270px',
         });
 
         dialogRef.afterClosed().subscribe((result: Student) => {
