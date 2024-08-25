@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { ClockComponent } from './clock/clock.component';
 import { StudentComponent } from './student/student.component';
 import { StudentDialogComponent } from './student-dialog/student-dialog.component';
+import { StudentProComponent } from './student-pro/student-pro.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { StudentDialogComponent } from './student-dialog/student-dialog.componen
     ClockComponent,
     StudentComponent,
     StudentDialogComponent,
+    StudentProComponent,
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
