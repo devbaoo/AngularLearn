@@ -9,6 +9,8 @@ import { StudentComponent } from './student/student.component';
 import { StudentProComponent } from './student-pro/student-pro.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
+import { PaymentMethodComponent } from './paymentmethod/paymentmethod.component';
+import { VisaComponent } from './visa/visa.component';
 
 export const routes: Routes = [
   //default route ve child
@@ -28,6 +30,11 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent,
       },
+      {
+        path: 'paymentmethod',
+        component: PaymentMethodComponent,
+      },
+      { path: 'visa', component: VisaComponent },
     ],
   },
   {

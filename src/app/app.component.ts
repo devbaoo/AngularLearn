@@ -11,6 +11,8 @@ import { StudentComponent } from './student/student.component';
 import { StudentDialogComponent } from './student-dialog/student-dialog.component';
 import { StudentProComponent } from './student-pro/student-pro.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { PaymentMethodComponent } from './paymentmethod/paymentmethod.component';
+import { VisaComponent } from './visa/visa.component';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +32,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     StudentDialogComponent,
     StudentProComponent,
     SidebarComponent,
+    PaymentMethodComponent,
+    VisaComponent,
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
